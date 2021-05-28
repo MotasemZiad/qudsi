@@ -2,13 +2,22 @@ package com.iug.qudsiapp.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.sql.Timestamp
+
 
 @Entity(tableName = "news_table")
 data class News(
+
+    val title: String,
+
     @PrimaryKey
-    val id: String,
-    val content: String,
-    val img: String,
-    val date: Long
+    val url: String,
+
+    val urlToImage: String,
+
+    val publishedAt: String,
+
+    val description: String,
+
+    val author: String
+
 )

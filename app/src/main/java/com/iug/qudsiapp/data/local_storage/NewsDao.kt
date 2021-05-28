@@ -12,6 +12,6 @@ interface NewsDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addNews(news: News)
 
-    @Query("SELECT * FROM news_table ORDER BY date DESC")
+    @Query("SELECT * FROM news_table ORDER BY publishedAt DESC")
     fun readAllNews(): LiveData<List<News>>
 }

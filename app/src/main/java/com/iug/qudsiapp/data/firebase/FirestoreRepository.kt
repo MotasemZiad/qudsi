@@ -1,6 +1,5 @@
 package com.iug.qudsiapp.data.firebase
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
@@ -26,13 +25,13 @@ object FirestoreRepository {
                 .addOnSuccessListener { task ->
                     val tempArr = mutableListOf<News>()
                     task.documents.forEach { documentSnapshot ->
-                        val news = News(
+                       /* val news = News(
                             documentSnapshot.id,
                             documentSnapshot.getString("content")!!,
                             documentSnapshot.getString("img")!!,
                             documentSnapshot.getDate("date")!!.time
-                        )
-                        tempArr.add(news)
+                        )*/
+                      //  tempArr.add(news)
                     }
                     mNews.value = tempArr
 
