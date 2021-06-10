@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newsFragment"
+        android:title="الأخبار"
+        android:icon="@drawable/ic_news"/>
+
+    <item
+        android:id="@+id/cityFragment"
+        android:title="المدينة"
+        android:icon="@drawable/ic_dam"/>
+
+    <item
+        android:id="@+id/favoriteFragment"
+        android:title="المفضلة"
+        android:icon="@drawable/ic_fav"/>
+
+</menu>
