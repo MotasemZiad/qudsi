@@ -3,19 +3,16 @@ package com.iug.qudsiapp.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.iug.qudsiapp.R
 import com.iug.qudsiapp.databinding.ActivityMainBinding
-import com.iug.qudsiapp.view_models.TestViewModel
-import kotlinx.coroutines.GlobalScope
+import com.iug.qudsiapp.ui.view_models.NewsViewModel
 import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mViewModel : TestViewModel
+    private lateinit var mViewModel : NewsViewModel
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -9,7 +9,7 @@ class ServiceBuilder {
 
     companion object {
 
-        private const val baseURL = "https://"
+        private const val baseURL = "https://newsapi.org/v2/"
         var apis: Api? = null
 
 
