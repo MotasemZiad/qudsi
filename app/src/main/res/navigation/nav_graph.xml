@@ -9,7 +9,15 @@
         android:id="@+id/newsFragment"
         android:name="com.iug.qudsiapp.ui.fragments.NewsFragment"
         android:label="fragment_news"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_newsDetailsFragment"
+            app:destination="@id/newsDetailsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.iug.qudsiapp.ui.fragments.FavoriteFragment"
@@ -20,4 +28,13 @@
         android:name="com.iug.qudsiapp.ui.fragments.CityFragment"
         android:label="fragment_city"
         tools:layout="@layout/fragment_city" />
+    <fragment
+        android:id="@+id/newsDetailsFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.NewsDetailsFragment"
+        android:label="fragment_news_details"
+        tools:layout="@layout/fragment_news_details" >
+        <argument
+            android:name="news"
+            app:argType="com.iug.qudsiapp.model.api.Article" />
+    </fragment>
 </navigation>

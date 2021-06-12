@@ -15,17 +15,9 @@ import kotlinx.coroutines.withContext
 
 class NewsViewModel: ViewModel() {
 
-    var news = FirestoreRepository.mNews
     var repository = Repository()
 
-    private var dataNews = MutableLiveData<APIResponse>()
-    private lateinit var repo: LiveData<MutableList<News>>
-
-    fun getNews() {
-        GlobalScope.launch {
-            repo = FirestoreRepository.getNews()
-        }
-    }
+    var dataNews = MutableLiveData<APIResponse>()
 
     fun getHomeNews() {
         viewModelScope.launch(Dispatchers.IO) {

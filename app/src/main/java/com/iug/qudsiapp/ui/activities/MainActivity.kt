@@ -8,6 +8,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.iug.qudsiapp.R
 import com.iug.qudsiapp.databinding.ActivityMainBinding
 import com.iug.qudsiapp.ui.view_models.NewsViewModel
+import com.iug.qudsiapp.util.Commons
 import kotlinx.coroutines.delay
 
 class MainActivity : AppCompatActivity() {
@@ -21,8 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val navController = findNavController(R.id.fragment)
-
         binding.bottomNav.setupWithNavController(navController)
+        Commons.setLocale("ar", this)
 
 //        mViewModel = ViewModelProvider(this).get(TestViewModel::class.java)
 //        mViewModel.news.observe(this){newsList ->

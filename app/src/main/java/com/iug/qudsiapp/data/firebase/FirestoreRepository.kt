@@ -1,6 +1,5 @@
 package com.iug.qudsiapp.data.firebase
 
-import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.firestore.FirebaseFirestore
@@ -38,11 +37,8 @@ object FirestoreRepository {
 
                 }.addOnFailureListener {
                     exception = it
-
                 }
         }
-
-
         return mNews
     }
 }
