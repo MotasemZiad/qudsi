@@ -2,7 +2,7 @@ package com.iug.qudsiapp.repository
 
 import com.iug.qudsiapp.network.ServiceBuilder
 
-class Repository {
+class APIRepository {
 
     suspend fun getNews(
         q : String,

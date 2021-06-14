@@ -3,6 +3,7 @@ package com.iug.qudsiapp.ui.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.iug.qudsiapp.R
@@ -24,6 +25,13 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragment)
         binding.bottomNav.setupWithNavController(navController)
         Commons.setLocale("ar", this)
+
+        when (Commons.getSharedPreferences(this).getBoolean(Commons.IS_NIGHT, false)) {
+            false ->
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            true ->
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        }
 
 //        mViewModel = ViewModelProvider(this).get(TestViewModel::class.java)
 //        mViewModel.news.observe(this){newsList ->

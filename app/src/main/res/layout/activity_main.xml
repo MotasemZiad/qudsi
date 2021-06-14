@@ -12,12 +12,13 @@
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:menu="@menu/nav_menu"
+            android:background="@color/colorBackground"
+            android:fontFamily="@font/katibeh_regular"
             app:labelVisibilityMode="unlabeled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/nav_menu" />
 
         <fragment
             android:id="@+id/fragment"

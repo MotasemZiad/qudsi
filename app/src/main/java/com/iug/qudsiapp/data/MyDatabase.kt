@@ -1,10 +1,10 @@
-package com.iug.qudsiapp.data.local_storage
+package com.iug.qudsiapp.data
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.iug.qudsiapp.model.News
+import com.iug.qudsiapp.model.local_storage.News
 
 @Database(entities = [News::class], version = 1, exportSchema = false)
 abstract class MyDatabase : RoomDatabase() {

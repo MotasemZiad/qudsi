@@ -26,7 +26,7 @@
             <androidx.appcompat.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white">
+                android:background="@color/colorBackground">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -36,20 +36,32 @@
                         android:id="@+id/imgBack"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:layout_weight="0.1"
                         android:src="@drawable/ic_arrow_back"
-                        app:tint="@color/colorPrimary"/>
+                        app:tint="@color/colorPrimary" />
 
                     <TextView
                         android:id="@+id/textView6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.9"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/katibeh_regular"
+                        android:padding="4dp"
                         android:text="@string/app_name"
                         android:textAlignment="viewStart"
                         android:textColor="@color/colorPrimary"
                         android:textSize="18sp"
                         android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgFav"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.2"
+                        android:src="@drawable/ic_star"/>
 
                 </LinearLayout>
 
@@ -62,9 +74,9 @@
             android:id="@+id/imageView2"
             android:layout_width="0dp"
             android:layout_height="350dp"
+            android:imageURL="@{news.urlToImage}"
             android:scaleType="centerCrop"
             android:src="@drawable/news_placeholder"
-            android:imageURL="@{news.urlToImage}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appbar" />
@@ -92,11 +104,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
+            android:alpha="0.8"
             android:gravity="start"
             android:text="@{news.description}"
             android:textColor="@color/black"
             android:textSize="14sp"
-            android:alpha="0.8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />

@@ -1,7 +1,6 @@
 package com.iug.qudsiapp.services
 
 import android.content.Intent
-import android.content.SharedPreferences
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -10,11 +9,8 @@ import com.iug.qudsiapp.ui.activities.SplashActivity
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     private lateinit var myNotificationManager: MyNotificationManager
-    private lateinit var sharedPreferences: SharedPreferences
 
-    override fun onNewToken(token: String) {
-
-    }
+    override fun onNewToken(token: String) {}
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)

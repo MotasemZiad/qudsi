@@ -16,4 +16,14 @@
         android:title="المفضلة"
         android:icon="@drawable/ic_fav"/>
 
+    <item
+        android:id="@+id/aboutFragment"
+        android:title="نبذة"
+        android:icon="@drawable/ic_information"/>
+
+    <item
+        android:id="@+id/settingFragment"
+        android:title="الإعدادات"
+        android:icon="@drawable/ic_settings"/>
+
 </menu>

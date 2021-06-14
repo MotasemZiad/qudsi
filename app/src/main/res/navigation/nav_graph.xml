@@ -22,12 +22,28 @@
         android:id="@+id/favoriteFragment"
         android:name="com.iug.qudsiapp.ui.fragments.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_favDetailsFragment"
+            app:destination="@id/favDetailsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
+    </fragment>
     <fragment
         android:id="@+id/cityFragment"
         android:name="com.iug.qudsiapp.ui.fragments.CityFragment"
         android:label="fragment_city"
-        tools:layout="@layout/fragment_city" />
+        tools:layout="@layout/fragment_city" >
+        <action
+            android:id="@+id/action_cityFragment_to_subCityFragment"
+            app:destination="@id/subCityFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
     <fragment
         android:id="@+id/newsDetailsFragment"
         android:name="com.iug.qudsiapp.ui.fragments.NewsDetailsFragment"
@@ -35,6 +51,50 @@
         tools:layout="@layout/fragment_news_details" >
         <argument
             android:name="news"
-            app:argType="com.iug.qudsiapp.model.api.Article" />
+            app:argType="com.iug.qudsiapp.model.api.Article"/>
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/subCityFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.SubCityFragment"
+        android:label="fragment_sub_city"
+        tools:layout="@layout/fragment_sub_city" >
+        <argument
+            android:name="title"
+            app:argType="com.iug.qudsiapp.model.firestore.Title" />
+        <action
+            android:id="@+id/action_subCityFragment_to_subCityDetailsFragment"
+            app:destination="@id/subCityDetailsFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/subCityDetailsFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.SubCityDetailsFragment"
+        android:label="fragment_sub_city_details"
+        tools:layout="@layout/fragment_sub_city_details" >
+        <argument
+            android:name="subject"
+            app:argType="com.iug.qudsiapp.model.firestore.Subject" />
+    </fragment>
+    <fragment
+        android:id="@+id/favDetailsFragment"
+        android:name="com.iug.qudsiapp.ui.fragments.FavDetailsFragment"
+        android:label="fragment_fav_details"
+        tools:layout="@layout/fragment_fav_details" >
+        <argument
+            android:name="news"
+            app:argType="com.iug.qudsiapp.model.local_storage.News" />
     </fragment>
 </navigation>

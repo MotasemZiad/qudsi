@@ -1,21 +1,17 @@
 package com.iug.qudsiapp.ui.view_models
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.iug.qudsiapp.data.firebase.FirestoreRepository
-import com.iug.qudsiapp.model.News
 import com.iug.qudsiapp.model.api.APIResponse
-import com.iug.qudsiapp.repository.Repository
+import com.iug.qudsiapp.repository.APIRepository
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class NewsViewModel: ViewModel() {
 
-    var repository = Repository()
+    var repository = APIRepository()
 
     var dataNews = MutableLiveData<APIResponse>()
 
