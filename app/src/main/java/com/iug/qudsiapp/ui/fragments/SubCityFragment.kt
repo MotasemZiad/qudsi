@@ -1,6 +1,7 @@
 package com.iug.qudsiapp.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -58,7 +59,28 @@ class SubCityFragment : Fragment() {
                 R.anim.recyclerview_animation
             )
         )
-        viewModel.getSubjects(id)
+        var name = ""
+        when(id){
+            "0Auajux40SP4LCkjeoCe" -> {
+                name = "landmarks"
+            }
+            "6zDXAatNPEvL44ZutqT9" -> {
+                name = "shops"
+            }
+            "8lwLCTiFU8uHrFcdyfHG" -> {
+                name = "schools"
+            }
+            "K4Y9w0MAg2bxtj1In4Z3" -> {
+                name = "pools"
+            }
+            "bSy2pPgTLpBRZwnSR8EJ" -> {
+                name = "gates"
+            }
+            "fmeWQzsWgjbZy8DdTBvF" -> {
+                name = "mosques"
+            }
+        }
+        viewModel.getSubjects(id, name)
     }
 
     private fun getSubjects() {

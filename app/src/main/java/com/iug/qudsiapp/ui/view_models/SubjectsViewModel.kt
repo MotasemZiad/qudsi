@@ -16,9 +16,9 @@ class SubjectsViewModel: ViewModel() {
 
     var dataSubjects = MutableLiveData<ArrayList<Subject>>()
 
-    fun getSubjects(id: String) {
+    fun getSubjects(id: String, name: String) {
         viewModelScope.launch(Dispatchers.IO) {
-            val response = repository.getSubjects(id)
+            val response = repository.getSubjects(id, name)
             delay(2000)
             withContext(Dispatchers.Main){
                 dataSubjects.postValue(response)

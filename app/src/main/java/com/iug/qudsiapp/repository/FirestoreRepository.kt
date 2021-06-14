@@ -32,9 +32,9 @@ class FirestoreRepository {
         return titles
     }
 
-    fun getSubjects(id: String): ArrayList<Subject> {
+    fun getSubjects(id: String, name: String): ArrayList<Subject> {
         val subjects = ArrayList<Subject>()
-        instance.collection("cities").document(id).collection("items")
+        instance.collection("cities").document(id).collection(name)
             .get()
             .addOnSuccessListener { task ->
                 task.documents.forEach { documentSnapshot ->
